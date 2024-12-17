@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root-window">
+      <div id="render-target"></div>
+    </div>
+  </body>
+  <script type="module">
+    import { createScene } from "./src/scene.js";
+
+    window.onload = () => {
+      const sceneInstance = createScene(); 
+      window.scene = sceneInstance; 
+      sceneInstance.start();
+    }
+  </script>
+</html>
